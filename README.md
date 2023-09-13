@@ -1,1 +1,1 @@
-# CSUSE-CSE6550-math4kid-team2
+# CSUSb-CSE6550-math4kid-team2
