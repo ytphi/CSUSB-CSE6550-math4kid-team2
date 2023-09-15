@@ -12,3 +12,5 @@ The "Kid Subtraction App: Shot Monster" is an exciting and educational game desi
 🎨 Colorful and Engaging: Enjoy vibrant visuals and a user-friendly interface designed with kids in mind.
 
 📈 Progress Tracking: Parents and educators can track a child's progress to support their learning journey.
+
+[Class_Diagram.pdf](https://github.com/ytphi/CSUSB-CSE6550-math4kid-team2/files/12629247/Class_Diagram.pdf)
