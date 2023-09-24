@@ -1,2 +1,1 @@
-Azure connect test
-issue1
+Azure Boards connect test
