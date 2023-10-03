@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dog for menu_0: 6929575738565496934
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

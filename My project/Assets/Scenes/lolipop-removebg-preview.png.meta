@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lolipop-removebg-preview_0: 966097918005215976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -200,7 +200,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      colored-speech-bubble-png-removebg-preview_0: 6951461610409519717
+      colored-speech-bubble-png-removebg-preview_1: 9038469940352502696
+      colored-speech-bubble-png-removebg-preview_2: 9037792204954461599
+      colored-speech-bubble-png-removebg-preview_3: -2590494553933824862
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
