@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wood_try_again-removebg-preview_0: 3303404118888058978
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

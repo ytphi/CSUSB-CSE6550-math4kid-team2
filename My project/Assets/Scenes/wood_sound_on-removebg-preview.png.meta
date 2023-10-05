@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wood_sound_on-removebg-preview_0: -8977611842399519793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
