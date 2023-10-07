@@ -215,7 +215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3664866570415897799, guid: 477a104081e70bc4da93abe8f66c66f6, type: 3}
+  m_Sprite: {fileID: 2109662213400568367, guid: 4fd0c03d106208743a9ca731be38e9cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -344,7 +344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369, y: 142.68}
+  m_AnchoredPosition: {x: -351, y: 196}
   m_SizeDelta: {x: 104.5739, y: 72.6355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &898458328
@@ -475,8 +475,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 434.4952, y: 156.5887}
+  m_AnchoredPosition: {x: 31, y: 85}
+  m_SizeDelta: {x: 569.7516, y: 187.6611}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944785213
 MonoBehaviour:
@@ -507,8 +507,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278848077
+  m_fontColor: {r: 0.3018868, g: 0.03892249, b: 0.03892249, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -525,8 +525,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

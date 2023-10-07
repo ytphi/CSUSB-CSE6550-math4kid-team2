@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2395a38fde5998043b5d133c3e11da4a
+guid: 4fd0c03d106208743a9ca731be38e9cc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3022391764369245871
-    second: music_off-removebg-preview_0
+      213: 2109662213400568367
+    second: play background_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: music_off-removebg-preview_0
+      name: play background_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 14
-        width: 182
-        height: 182
+        x: 0
+        y: 0
+        width: 768
+        height: 768
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15974b024be4e06d0800000000000000
-      internalID: -3022391764369245871
+      spriteID: f222ec90b96074d10800000000000000
+      internalID: 2109662213400568367
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      music_off-removebg-preview_0: -3022391764369245871
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: effe077ec464ad3408c1c410ee85e483
+guid: 450ceedba434fee40a50468f257a8749
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2819271360942330775
-    second: sound_on-removebg-preview_0
+      213: -1297977106604638577
+    second: dog for menu 1_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sound_on-removebg-preview_0
+      name: dog for menu 1_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 12
-        width: 476
-        height: 476
+        x: 59
+        y: 44
+        width: 154
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 793566a9d50102720800000000000000
-      internalID: 2819271360942330775
+      spriteID: f8ebd32d2b8acfde0800000000000000
+      internalID: -1297977106604638577
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      sound_on-removebg-preview_0: 2819271360942330775
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 4bbc67b35695f954fa8b7be330211012
+guid: 3165a80da2f41ad49a07e2fd2902fd04
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6951461610409519717
-    second: colored-speech-bubble-png-removebg-preview_0
-  - first:
-      213: 9038469940352502696
-    second: colored-speech-bubble-png-removebg-preview_1
-  - first:
-      213: 9037792204954461599
-    second: colored-speech-bubble-png-removebg-preview_2
-  - first:
-      213: -2590494553933824862
-    second: colored-speech-bubble-png-removebg-preview_3
+      213: 4350133021289841730
+    second: Design_a_lovable_and-removebg-preview_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -107,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: colored-speech-bubble-png-removebg-preview_0
+      name: Design_a_lovable_and-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 116
-        width: 523
-        height: 320
+        x: 38
+        y: 21
+        width: 188
+        height: 235
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,71 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56a6936118d887060800000000000000
-      internalID: 6951461610409519717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: colored-speech-bubble-png-removebg-preview_1
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 73
-        width: 87
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8abc1cbd5881f6d70800000000000000
-      internalID: 9038469940352502696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: colored-speech-bubble-png-removebg-preview_2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 36
-        width: 65
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f95ea1a4020bc6d70800000000000000
-      internalID: 9037792204954461599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: colored-speech-bubble-png-removebg-preview_3
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 9
-        width: 41
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2acb030ade6bc0cd0800000000000000
-      internalID: -2590494553933824862
+      spriteID: 2448da35fe6ce5c30800000000000000
+      internalID: 4350133021289841730
       vertices: []
       indices: 
       edges: []
@@ -200,11 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      colored-speech-bubble-png-removebg-preview_0: 6951461610409519717
-      colored-speech-bubble-png-removebg-preview_1: 9038469940352502696
-      colored-speech-bubble-png-removebg-preview_2: 9037792204954461599
-      colored-speech-bubble-png-removebg-preview_3: -2590494553933824862
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

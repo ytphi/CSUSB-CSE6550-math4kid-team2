@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b6036786657956e4c9a742590cdb30d1
+guid: d0ea5af0bb724fb4b8543d61117284ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6560103318017402187
-    second: background without bridge 1_0
+      213: 7192422920975844218
+    second: basket-with-autumn-fruits-removebg-preview_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background without bridge 1_0
+      name: basket-with-autumn-fruits-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 937
+        x: 7
+        y: 15
+        width: 291
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b45e948f53b2a0b50800000000000000
-      internalID: 6560103318017402187
+      spriteID: a73842f1a8e90d360800000000000000
+      internalID: 7192422920975844218
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      background without bridge 1_0: 6560103318017402187
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

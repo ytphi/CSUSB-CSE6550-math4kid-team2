@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: faeef36f5e7ab2e41a66a88bca3d9443
+guid: 2daf61d54c1a64d4fac848dc3aec861c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9205519012253321532
-    second: colorful_speech_bubble-removebg-preview_0
+      213: 5703228454191173365
+    second: monster2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: colorful_speech_bubble-removebg-preview_0
+      name: monster2_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 51
-        width: 392
-        height: 305
+        x: 20
+        y: 14
+        width: 225
+        height: 247
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c639853b3d6f3080800000000000000
-      internalID: -9205519012253321532
+      spriteID: 5fe07f4ef00f52f40800000000000000
+      internalID: 5703228454191173365
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      colorful_speech_bubble-removebg-preview_0: -9205519012253321532
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

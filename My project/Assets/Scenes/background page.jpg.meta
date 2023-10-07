@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a1b6278ec93b2ef49a2e5657a125d90e
+guid: cc5a491b8547599479c2119567b6212f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 966097918005215976
-    second: lolipop-removebg-preview_0
+      213: -7225925129148339029
+    second: background page_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lolipop-removebg-preview_0
+      name: background page_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 11
-        width: 499
-        height: 479
+        y: 0
+        width: 768
+        height: 768
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e202f410f4486d00800000000000000
-      internalID: 966097918005215976
+      spriteID: bac6b8f216b58bb90800000000000000
+      internalID: -7225925129148339029
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      lolipop-removebg-preview_0: 966097918005215976
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

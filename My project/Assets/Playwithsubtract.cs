@@ -15,12 +15,13 @@ public class Playwithsubtract : MonoBehaviour
     public TextMeshProUGUI Question, Answer1, Answer2, Answer3,Score_text;
     public int value1, value2, answer;
     public static int consequtive_ques_no = 5,score_value;
+    public Vector3 startPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-
-
+        Debug.Log(Monster.position);
+        startPosition = new Vector3 (Monster.position.x, Monster.position.y, Monster.position.z);
         QuestionGenerate();
         
     }
@@ -92,7 +93,10 @@ public class Playwithsubtract : MonoBehaviour
     {
         if (button_answer.text == answer.ToString())
         {
-            if(consequtive_ques_no!=0)
+
+            //Monster.SetPositionAndRotation(new Vector3(682.00f, 110.45f, 0.00f), Quaternion.identity);
+            Monster.position = startPosition;
+            if (consequtive_ques_no!=0)
             {
                 consequtive_ques_no--;
                 score_value++;
@@ -101,7 +105,7 @@ public class Playwithsubtract : MonoBehaviour
             }
             
             //SceneManager.LoadScene("mainmenuscene");
-            Debug.Log("correct");
+           // Debug.Log("correct");
         }
         else
         {
@@ -111,7 +115,7 @@ public class Playwithsubtract : MonoBehaviour
                 QuestionGenerate();
             }
             //SceneManager.LoadScene("scene4_tryagain");
-            Debug.Log("wrong");
+            //Debug.Log("wrong");
         }
         
         
