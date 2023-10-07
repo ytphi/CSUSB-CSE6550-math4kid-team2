@@ -12,10 +12,9 @@ public class Playwithsubtract : MonoBehaviour
     public Transform Dog;
     public Transform Monster;
     public float speed;
-    //public Text Question;
-    public TextMeshProUGUI Question, Answer1, Answer2, Answer3;
+    public TextMeshProUGUI Question, Answer1, Answer2, Answer3,Score_text;
     public int value1, value2, answer;
-    public static int consequtive_ques_no = 5;
+    public static int consequtive_ques_no = 5,score_value;
 
     // Start is called before the first frame update
     void Start()
@@ -23,41 +22,57 @@ public class Playwithsubtract : MonoBehaviour
 
 
         QuestionGenerate();
-        //CheckAnswer(button_answer,sceneName1,sceneName2);
+        
     }
     public void QuestionGenerate()
     {
-        value1 = Random.Range(1, 10);
-        value2 = Random.Range(1, 10);
-
-        if (value1 > value2)
+        if(score_value==5 & consequtive_ques_no ==0)
         {
-            Question.text = " " + value1 + " - " + value2 + " = ?";
-            answer = value1 - value2;
+            consequtive_ques_no = 5; score_value=0;
+            LoadScene("scene3_congratulation");
         }
-        else {
-            Question.text = " " + value2 + " - " + value1 + " = ?";
-            answer = value2 - value1;
-        }
-        int i = Random.Range(1, 3);
-        if (i == 1)
+        else if(score_value < 5 & consequtive_ques_no == 0)
         {
-            Answer1.text = answer + "";
-            Answer2.text = Random.Range(1, 10) + "";
-            Answer3.text = Random.Range(1, 10) + "";
-        }
-        else if (i == 2)
-        {
-            Answer2.text = answer + "";
-            Answer1.text = Random.Range(1, 10) + "";
-            Answer3.text = Random.Range(1, 10) + "";
+            consequtive_ques_no = 5; score_value = 0;
+            LoadScene("scene4_tryagain");
         }
         else
         {
-            Answer3.text = answer + "";
-            Answer2.text = Random.Range(1, 10) + "";
-            Answer1.text = Random.Range(1, 10) + "";
+            value1 = Random.Range(1, 10);
+            value2 = Random.Range(1, 10);
+
+            if (value1 > value2)
+            {
+                Question.text = " " + value1 + " - " + value2 + " = ?";
+                answer = value1 - value2;
+            }
+            else
+            {
+                Question.text = " " + value2 + " - " + value1 + " = ?";
+                answer = value2 - value1;
+            }
+            int i = Random.Range(1, 3);
+            if (i == 1)
+            {
+                Answer1.text = answer + "";
+                Answer2.text = Random.Range(1, 10) + "";
+                Answer3.text = Random.Range(1, 10) + "";
+            }
+            else if (i == 2)
+            {
+                Answer2.text = answer + "";
+                Answer1.text = Random.Range(1, 10) + "";
+                Answer3.text = Random.Range(1, 10) + "";
+            }
+            else
+            {
+                Answer3.text = answer + "";
+                Answer2.text = Random.Range(1, 10) + "";
+                Answer1.text = Random.Range(1, 10) + "";
+            }
+
         }
+        
         
 
 
@@ -73,15 +88,18 @@ public class Playwithsubtract : MonoBehaviour
     {
 
     }
-    public void CheckAnswer(TextMeshProUGUI button_answer)//, string sceneName1, string sceneName2)
+    public void CheckAnswer(TextMeshProUGUI button_answer)
     {
         if (button_answer.text == answer.ToString())
         {
             if(consequtive_ques_no!=0)
             {
                 consequtive_ques_no--;
+                score_value++;
+                Score_text .text= score_value + "";
                 QuestionGenerate();
             }
+            
             //SceneManager.LoadScene("mainmenuscene");
             Debug.Log("correct");
         }
@@ -96,5 +114,12 @@ public class Playwithsubtract : MonoBehaviour
             Debug.Log("wrong");
         }
         
+        
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+
     }
 }
