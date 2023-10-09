@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ca7b86772b2af8a43a461bbbb8a1e3fc
+guid: 751bb28c4db188b43a4d27541d54bfdd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7388397658127379228
-    second: question-removebg-preview (1)_0
+      213: 966097918005215976
+    second: lolipop-removebg-preview_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: question-removebg-preview (1)_0
+      name: lolipop-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 30
-        width: 590
-        height: 319
+        x: 0
+        y: 0
+        width: 130
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e45dffa973277990800000000000000
-      internalID: -7388397658127379228
+      spriteID: 8e202f410f4486d00800000000000000
+      internalID: 966097918005215976
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      question-removebg-preview (1)_0: -7388397658127379228
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

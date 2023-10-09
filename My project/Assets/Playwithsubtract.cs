@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 
 
@@ -13,13 +14,27 @@ public class Playwithsubtract : MonoBehaviour
     public Transform Monster;
     public float speed;
     public TextMeshProUGUI Question, Answer1, Answer2, Answer3,Score_text;
-    public int value1, value2, answer;
-    public static int consequtive_ques_no = 5,score_value;
+    public int value1, value2, answer,progress=0;
+    public static int consequtive_ques_no = 5,score_value, file_score;
     public Vector3 startPosition;
+    public Slider slider_value;
+    public string File_path,fileContents;
 
     // Start is called before the first frame update
     void Start()
     {
+        File_path = "Assets/Score_data.txt"; // Update with your file path
+        if (File.Exists(File_path))
+        {
+            fileContents = File.ReadAllText(File_path);
+            Debug.Log("File Contents:\n" + fileContents);
+        }
+        else
+        {
+            Debug.LogError("File not found at path: " + File_path);
+        }
+        Score_text.text = fileContents;
+        file_score = int.Parse(fileContents);
         Debug.Log(Monster.position);
         startPosition = new Vector3 (Monster.position.x, Monster.position.y, Monster.position.z);
         QuestionGenerate();
@@ -29,12 +44,16 @@ public class Playwithsubtract : MonoBehaviour
     {
         if(score_value==5 & consequtive_ques_no ==0)
         {
+            file_score++;
             consequtive_ques_no = 5; score_value=0;
+            File.WriteAllText(File_path, file_score.ToString());
             LoadScene("scene3_congratulation");
         }
         else if(score_value < 5 & consequtive_ques_no == 0)
         {
+            
             consequtive_ques_no = 5; score_value = 0;
+            File.WriteAllText(File_path, file_score.ToString());
             LoadScene("scene4_tryagain");
         }
         else
@@ -100,7 +119,9 @@ public class Playwithsubtract : MonoBehaviour
             {
                 consequtive_ques_no--;
                 score_value++;
-                Score_text .text= score_value + "";
+                
+                
+                //Score_text .text= score_value.ToString();
                 QuestionGenerate();
             }
             
@@ -117,6 +138,8 @@ public class Playwithsubtract : MonoBehaviour
             //SceneManager.LoadScene("scene4_tryagain");
             //Debug.Log("wrong");
         }
+        progress++;
+        slider_value.value = progress;
         
         
     }
