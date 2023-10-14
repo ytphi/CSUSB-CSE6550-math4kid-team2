@@ -33,7 +33,7 @@ public class Playwithsubtract : MonoBehaviour
         {
             Debug.LogError("File not found at path: " + File_path);
         }
-        Score_text.text = fileContents;
+        Score_text.text = " "+fileContents;
         file_score = int.Parse(fileContents);
         Debug.Log(Monster.position);
         startPosition = new Vector3 (Monster.position.x, Monster.position.y, Monster.position.z);
@@ -63,12 +63,12 @@ public class Playwithsubtract : MonoBehaviour
 
             if (value1 > value2)
             {
-                Question.text = " " + value1 + " - " + value2 + " = ?";
+                Question.text = "  " + value1 + "  -  " + value2 + "  =  ?";
                 answer = value1 - value2;
             }
             else
             {
-                Question.text = " " + value2 + " - " + value1 + " = ?";
+                Question.text = "  " + value2 + "  -  " + value1 + "  =  ?";
                 answer = value2 - value1;
             }
             int i = Random.Range(1, 3);
