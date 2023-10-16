@@ -1222,6 +1222,12 @@ MonoBehaviour:
   slider_value: {fileID: 1303441430}
   File_path: 
   fileContents: 
+  imageComponent: {fileID: 1222507168}
+  imageOptions:
+  - {fileID: 4322125521261890782, guid: cbdf59c600ca1014b889f80488ad7c3f, type: 3}
+  - {fileID: -8915481715034314228, guid: c3e38dd148c367243aab6b8fe6b76f45, type: 3}
+  - {fileID: 6618906693038760871, guid: c94bbfa9644bda0478ddb195944f914c, type: 3}
+  - {fileID: 5437125033773365408, guid: 099690a240fb08e40a862c6b6e3388e8, type: 3}
 --- !u!114 &579926973
 MonoBehaviour:
   m_ObjectHideFlags: 0

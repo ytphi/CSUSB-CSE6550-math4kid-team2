@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      strawberry-removebg-preview_0: 4111457248275438223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

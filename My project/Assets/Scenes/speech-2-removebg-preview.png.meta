@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      speech-2-removebg-preview_0: -3119856046547757390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

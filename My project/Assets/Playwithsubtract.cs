@@ -60,6 +60,7 @@ public class Playwithsubtract : MonoBehaviour
         }
         else
         {
+            
             value1 = Random.Range(1, 10);
             value2 = Random.Range(1, 10);
 
@@ -121,9 +122,11 @@ public class Playwithsubtract : MonoBehaviour
             {
                 consequtive_ques_no--;
                 score_value++;
-                
-                
+
+
                 //Score_text .text= score_value.ToString();
+                int randomIndex = Random.Range(0, imageOptions.Count);
+                imageComponent.sprite = imageOptions[randomIndex];
                 QuestionGenerate();
             }
             

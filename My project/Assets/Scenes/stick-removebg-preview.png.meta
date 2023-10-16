@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stick-removebg-preview_0: -4888603984178813659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

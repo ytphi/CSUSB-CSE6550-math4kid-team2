@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dog_3-removebg-preview_0: -8541706938708006759
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

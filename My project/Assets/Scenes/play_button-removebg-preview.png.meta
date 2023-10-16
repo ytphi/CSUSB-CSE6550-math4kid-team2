@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      play_button-removebg-preview_0: 2269838978135303944
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

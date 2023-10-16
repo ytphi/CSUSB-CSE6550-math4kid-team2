@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cute_monster-4-removebg-preview_0: 422501862397053593
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pinkstick_0: 4840913091215569126
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
