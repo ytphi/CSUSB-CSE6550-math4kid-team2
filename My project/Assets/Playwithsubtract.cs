@@ -19,6 +19,8 @@ public class Playwithsubtract : MonoBehaviour
     public Vector3 startPosition;
     public Slider slider_value;
     public string File_path,fileContents;
+    public Image imageComponent;
+    public List<Sprite> imageOptions = new List<Sprite>();
 
     // Start is called before the first frame update
     void Start()
@@ -147,6 +149,10 @@ public class Playwithsubtract : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+
+    }
+    public void ImageChange(Sprite imageName)
+    {
 
     }
 }

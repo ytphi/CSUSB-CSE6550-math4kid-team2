@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f0c3d22c92629a247aff4b20a52fb832
+guid: c94bbfa9644bda0478ddb195944f914c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1041204573151620898
-    second: Design_a_lovable_and__2_-removebg-preview-removebg-preview_0
+      213: 6618906693038760871
+    second: cute_monster-3-removebg-preview_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Design_a_lovable_and__2_-removebg-preview-removebg-preview_0
+      name: cute_monster-3-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 21
         y: 0
-        width: 272
-        height: 264
+        width: 290
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22fe631fa0a137e00800000000000000
-      internalID: 1041204573151620898
+      spriteID: 7a3e700a1941bdb50800000000000000
+      internalID: 6618906693038760871
       vertices: []
       indices: 
       edges: []

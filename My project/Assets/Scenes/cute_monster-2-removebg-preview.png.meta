@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 39ce5090f7ac6d94eb5c92f0a9614093
+guid: c3e38dd148c367243aab6b8fe6b76f45
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2359189959873195102
-    second: sad_dog-removebg-preview_0
+      213: -8915481715034314228
+    second: cute_monster-2-removebg-preview_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sad_dog-removebg-preview_0
+      name: cute_monster-2-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 190
-        y: 13
-        width: 344
-        height: 383
+        x: 25
+        y: 4
+        width: 365
+        height: 392
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5ce8ebd4c68db020800000000000000
-      internalID: 2359189959873195102
+      spriteID: c0aa3edcd98d54480800000000000000
+      internalID: -8915481715034314228
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      sad_dog-removebg-preview_0: 2359189959873195102
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

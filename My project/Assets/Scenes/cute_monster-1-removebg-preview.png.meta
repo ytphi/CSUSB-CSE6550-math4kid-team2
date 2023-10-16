@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9f2cadac33adf5d4fb8e93e41ef3b0fd
+guid: cbdf59c600ca1014b889f80488ad7c3f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4070204441591362000
-    second: signboard_menu-removebg-preview_0
+      213: 4322125521261890782
+    second: cute_monster-1-removebg-preview_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: signboard_menu-removebg-preview_0
+      name: cute_monster-1-removebg-preview_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 432
-        height: 577
+        y: 7
+        width: 444
+        height: 353
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 03ecabf00aab387c0800000000000000
-      internalID: -4070204441591362000
+      spriteID: edc077113464bfb30800000000000000
+      internalID: 4322125521261890782
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      signboard_menu-removebg-preview_0: -4070204441591362000
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
