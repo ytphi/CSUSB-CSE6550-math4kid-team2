@@ -12,6 +12,7 @@ public class Playwithsubtract : MonoBehaviour
 {
     public Transform Dog;
     public Transform Monster;
+    
     public float speed;
     public TextMeshProUGUI Question, Answer1, Answer2, Answer3,Score_text;
     public int value1, value2, answer,progress=0;
@@ -21,6 +22,7 @@ public class Playwithsubtract : MonoBehaviour
     public string File_path,fileContents;
     public Image imageComponent;
     public List<Sprite> imageOptions = new List<Sprite>();
+    
 
     // Start is called before the first frame update
     void Start()
@@ -104,6 +106,10 @@ public class Playwithsubtract : MonoBehaviour
     public void FixedUpdate()
     {
         Monster.position = Vector3.MoveTowards(Monster.position, Dog.position, speed);
+        float distance = Vector3.Distance(Monster.position, Dog.position);
+        if(distance <=0) {
+            LoadScene("scene4_tryagain");
+        }
     }
 
     // Update is called once per frame
@@ -115,7 +121,7 @@ public class Playwithsubtract : MonoBehaviour
     {
         if (button_answer.text == answer.ToString())
         {
-
+            
             //Monster.SetPositionAndRotation(new Vector3(682.00f, 110.45f, 0.00f), Quaternion.identity);
             Monster.position = startPosition;
             if (consequtive_ques_no!=0)
@@ -124,24 +130,23 @@ public class Playwithsubtract : MonoBehaviour
                 score_value++;
 
 
-                //Score_text .text= score_value.ToString();
+                
                 int randomIndex = Random.Range(0, imageOptions.Count);
                 imageComponent.sprite = imageOptions[randomIndex];
                 QuestionGenerate();
             }
             
-            //SceneManager.LoadScene("mainmenuscene");
-           // Debug.Log("correct");
+            
         }
         else
         {
+            
             if (consequtive_ques_no != 0)
             {
                 consequtive_ques_no--;
                 QuestionGenerate();
             }
-            //SceneManager.LoadScene("scene4_tryagain");
-            //Debug.Log("wrong");
+            
         }
         progress++;
         slider_value.value = progress;
@@ -154,8 +159,8 @@ public class Playwithsubtract : MonoBehaviour
         SceneManager.LoadScene(sceneName);
 
     }
-    public void ImageChange(Sprite imageName)
-    {
+   
 
-    }
+
+
 }
