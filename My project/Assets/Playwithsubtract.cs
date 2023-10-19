@@ -66,7 +66,7 @@ public class Playwithsubtract : MonoBehaviour
             LoadScene("scene4_tryagain");
         }
         else
-        {
+        {   
             value1 = Random.Range(1, 10);
             value2 = Random.Range(1, 10);
 
@@ -123,10 +123,13 @@ public class Playwithsubtract : MonoBehaviour
         }
     }
 
-    public void CheckAnswer(TextMeshProUGUI button_answer)
+    public void CheckAnswer(Button button_colour)
     {
+        TextMeshProUGUI button_answer=button_colour.GetComponentInChildren<TextMeshProUGUI>();
+        Image image = button_colour.GetComponent<Image>();
         if (button_answer.text == answer.ToString())
         {
+            StartCoroutine(ChangeColorCoroutine(button_colour, Color.green));
             ThrowObject();
             
 
@@ -134,7 +137,7 @@ public class Playwithsubtract : MonoBehaviour
             {
                 consequtive_ques_no--;
                 score_value++;
-
+                
                 Debug.Log("start wait");
                 StartCoroutine(ResetThrowCooldown());
                 Debug.Log("end wait");
@@ -145,10 +148,12 @@ public class Playwithsubtract : MonoBehaviour
         }
         else
         {
+           
 
             if (consequtive_ques_no != 0)
             {
                 consequtive_ques_no--;
+                StartCoroutine(ChangeColorCoroutine(button_colour, Color.red));
                 QuestionGenerate();
             }
 
@@ -211,6 +216,19 @@ public class Playwithsubtract : MonoBehaviour
         {
             Question.text += item;
             yield return new WaitForSeconds(0.04f);
+        }
+    }
+    private IEnumerator ChangeColorCoroutine(Button button_image,Color c)
+    {
+        Image image = button_image.GetComponent<Image>();
+        Color original = image.color;
+        if (image != null)
+        {
+            image.color = c;
+
+            yield return new WaitForSeconds(1.0f);
+
+            image.color = original;
         }
     }
 }
