@@ -5,38 +5,39 @@ using UnityEngine.UI;
 
 public class testingForce : MonoBehaviour
 {
-    public Transform Dog,parentCanvas; // The point from which the object is thrown
+    public Transform Dog, parentCanvas, Dog1; // The point from which the object is thrown
     public GameObject Fruite; // The object to be thrown
     public float throwForce1 = 20.0f; // The force to throw the object
     public float throwForce2 = 5.0f;
     // The force to throw the object
-    public Sprite image;
-                                     //private bool canThrow = true;
+    
 
+    //private bool canThrow = true;
 
+   
+   
 
     public void ThrowObject()
     {
 
 
         // Create a new instance of the object to throw
-        Vector3 newPos = new Vector3(-190.0f, -70.0f, 0);
+        Vector3 newPos = new Vector3((Dog.position.x - 1920) / 1, (Dog.position.y - 1080) / 1, 0);
+        Debug.Log("fruit position:");
         Debug.Log(Dog.position);
+        Debug.Log("Dog position:");
+        Debug.Log(Dog1.position);
         GameObject FruiteClone = Instantiate(Fruite, newPos, Quaternion.identity);
-       FruiteClone.transform.SetParent(parentCanvas, false);
+        FruiteClone.transform.SetParent(parentCanvas, false);
 
         Debug.Log(FruiteClone.name);
+        Debug.Log("clone position:");
         Debug.Log(FruiteClone.transform.position);
-        // Calculate the throw direction
-        Vector3 throwDirection = Dog.right * throwForce1;
-        throwDirection += Dog.up * throwForce2;
-
-        // Apply the force to the thrown object
+        // Calculate the direction from the monster to the target
+        Vector2 direction = (Dog1.position - Dog.position).normalized;
         Rigidbody2D rb = FruiteClone.GetComponent<Rigidbody2D>();
-        rb.AddForce(throwDirection, ForceMode2D.Impulse);
-       
-
-        // Set a timer to allow throwing again
+        // Apply force to the monster in that direction
+        rb.AddForce(direction * 700.0f, ForceMode2D.Impulse);
         //StartCoroutine(ResetThrowCooldown());
     }
 
