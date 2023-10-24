@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wheel-removebg-preview_0: -7995034248841003422
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

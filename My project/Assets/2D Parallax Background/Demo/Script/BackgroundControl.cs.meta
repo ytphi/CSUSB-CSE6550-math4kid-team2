@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4389bccd7840a86499723b7b9e5c009d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 205634
+  packageName: 2D Parallax Background
+  packageVersion: 1.0
+  assetPath: Assets/2D Parallax Background/Demo/Script/BackgroundControl.cs
+  uploadId: 466791

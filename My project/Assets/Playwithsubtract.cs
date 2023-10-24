@@ -63,7 +63,7 @@ public class Playwithsubtract : MonoBehaviour
 
             consequtive_ques_no = 5; score_value = 0;
             File.WriteAllText(File_path, file_score.ToString());
-            LoadScene("scene4_tryagain");
+            LoadScene("scene4_tryagain_update");
         }
         else
         {   
@@ -119,7 +119,7 @@ public class Playwithsubtract : MonoBehaviour
         float distance = Vector3.Distance(Monster.position, Dog.position);
         if (distance <= 0)
         {
-            LoadScene("scene4_tryagain");
+            LoadScene("scene4_tryagain_update");
         }
     }
 
@@ -129,7 +129,7 @@ public class Playwithsubtract : MonoBehaviour
         Image image = button_colour.GetComponent<Image>();
         if (button_answer.text == answer.ToString())
         {
-            StartCoroutine(ChangeColorCoroutine(button_colour, Color.green));
+            StartCoroutine(ChangeColorCoroutineStart(button_colour, Color.green));
             ThrowObject();
             
 
@@ -153,7 +153,7 @@ public class Playwithsubtract : MonoBehaviour
             if (consequtive_ques_no != 0)
             {
                 consequtive_ques_no--;
-                StartCoroutine(ChangeColorCoroutine(button_colour, Color.red));
+                StartCoroutine(ChangeColorCoroutineStart(button_colour, Color.red));
                 QuestionGenerate();
             }
 
@@ -218,7 +218,7 @@ public class Playwithsubtract : MonoBehaviour
             yield return new WaitForSeconds(0.04f);
         }
     }
-    private IEnumerator ChangeColorCoroutine(Button button_image,Color c)
+    private IEnumerator ChangeColorCoroutineStart(Button button_image,Color c)
     {
         Image image = button_image.GetComponent<Image>();
         Color original = image.color;
