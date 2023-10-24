@@ -8,6 +8,7 @@ public class collision_detect : MonoBehaviour
     public ParticleSystem collision_obj1;
     public ParticleSystem collision_obj2;
     public bool once = true;
+    public Transform Gun;
 
     // Remove these two lines
     // bool em1 = collision_obj1.emission;
@@ -53,8 +54,17 @@ public class collision_detect : MonoBehaviour
         em2.enabled = false;
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    public void ShootGunPosition()
     {
-        // No need to start the coroutine here since it's already started in OnTriggerEnter2D
+        Vector3 position = Gun.position;
+        StartCoroutine(PositionChange(position));
+    }
+    public IEnumerator PositionChange(Vector3 pos)
+    {
+         Vector3 newpos=new Vector3(pos.x+20, pos.y, pos.z);
+         Gun.position = newpos;
+         yield return new WaitForSeconds(0.04f);
+        Gun.position = pos;
+        
     }
 }
