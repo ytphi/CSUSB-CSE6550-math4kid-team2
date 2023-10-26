@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Microsoft.AppCenter.Unity.Analytics;
 public class UIParticleSystem : MaskableGraphic
 {
     [SerializeField] private ParticleSystemRenderer _particleSystemRenderer;

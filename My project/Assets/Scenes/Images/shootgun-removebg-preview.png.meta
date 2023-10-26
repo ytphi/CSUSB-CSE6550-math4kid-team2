@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shootgun-removebg-preview_0: -1370144001923525224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
