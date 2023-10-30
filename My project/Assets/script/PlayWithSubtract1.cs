@@ -52,6 +52,9 @@ public class PlayWithSubtract1 : MonoBehaviour
     }
     public void QuestionGenerate()
     {
+        //ScoreData.Scoredata = score_value;
+        PlayerPrefs.SetInt("Scoredata", score_value);
+        Debug.Log(ScoreData.Scoredata.ToString());
         if (score_value == 5 & consequtive_ques_no == 0)
         {
             file_score++;
@@ -88,23 +91,56 @@ public class PlayWithSubtract1 : MonoBehaviour
                 answer = value2 - value1;
             }
             int i = Random.Range(1, 3);
+            int ans1, ans2;
             if (i == 1)
             {
                 Answer1.text = answer + "";
-                Answer2.text = Random.Range(1, 10) + "";
-                Answer3.text = Random.Range(1, 10) + "";
+                 ans1 = Random.Range(1, 10);
+                 ans2= Random.Range(1, 10);
+                while (answer == ans1)
+                {
+                    ans1 = Random.Range(1, 10);
+                }
+                Answer2.text = ans1.ToString();// Random.Range(1, 10) + "";
+                while (answer == ans2 || ans2==ans1)
+                {
+                    ans2 = Random.Range(1, 10);
+                }
+                Answer3.text = ans2.ToString(); // Random.Range(1, 10) + "";
             }
             else if (i == 2)
             {
                 Answer2.text = answer + "";
-                Answer1.text = Random.Range(1, 10) + "";
-                Answer3.text = Random.Range(1, 10) + "";
+                ans1 = Random.Range(1, 10);
+                ans2 = Random.Range(1, 10);
+                while (answer == ans1)
+                {
+                    ans1 = Random.Range(1, 10);
+                }
+                Answer1.text = ans1.ToString();// Random.Range(1, 10) + "";
+                while (answer == ans2 || ans2 == ans1)
+                {
+                    ans2 = Random.Range(1, 10);
+                }
+                Answer3.text = ans2.ToString();// Random.Range(1, 10) + "";
+                
             }
             else
             {
                 Answer3.text = answer + "";
-                Answer2.text = Random.Range(1, 10) + "";
-                Answer1.text = Random.Range(1, 10) + "";
+                ans1 = Random.Range(1, 10);
+                ans2 = Random.Range(1, 10);
+                while (answer == ans1)
+                {
+                    ans1 = Random.Range(1, 10);
+                }
+                Answer2.text = ans1.ToString();// Random.Range(1, 10) + "";
+                while (answer == ans2 || ans2 == ans1)
+                {
+                    ans2 = Random.Range(1, 10);
+                }
+                Answer1.text = ans2.ToString();// Random.Range(1, 10) + "";
+                
             }
 
         }

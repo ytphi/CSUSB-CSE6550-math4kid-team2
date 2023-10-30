@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 488051599}
   - component: {fileID: 488051598}
   - component: {fileID: 488051603}
+  - component: {fileID: 488051604}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -449,6 +450,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4acfcda523ba5ba4884a7dabfb31799e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &488051604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488051596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0be06f108705db4d9051ff7e2e05b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starImage: {fileID: 931664415}
+  spriteOptions:
+  - {fileID: 21300000, guid: 75f5c286c299d534ba06bb482172720f, type: 3}
+  - {fileID: 21300000, guid: c3de95d9ddb41cf48aa61aba825cc315, type: 3}
+  - {fileID: 21300000, guid: 7447508782dc7b44bb35c965ba01d11b, type: 3}
 --- !u!1 &608238935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,7 +1032,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 75f5c286c299d534ba06bb482172720f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7447508782dc7b44bb35c965ba01d11b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

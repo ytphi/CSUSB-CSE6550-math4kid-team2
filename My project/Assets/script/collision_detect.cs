@@ -10,6 +10,7 @@ public class collision_detect : MonoBehaviour
     public ParticleSystem collision_obj2;
     public bool once = true;
     public Transform Gun;
+    public AudioSource collisionSound;
 
     // Remove these two lines
     // bool em1 = collision_obj1.emission;
@@ -32,6 +33,10 @@ public class collision_detect : MonoBehaviour
 
             collision_obj1.Play();
             collision_obj2.Play();
+            if (collisionSound != null)
+            {
+                collisionSound.Play();
+            }
 
             StartCoroutine(PlayParticleSystemOnce());
         }
@@ -46,6 +51,7 @@ public class collision_detect : MonoBehaviour
 
         collision_obj1.Pause();
         collision_obj2.Pause();
+        collisionSound.Stop();
 
         // Access the emission module and disable it
         var em1 = collision_obj1.emission;
