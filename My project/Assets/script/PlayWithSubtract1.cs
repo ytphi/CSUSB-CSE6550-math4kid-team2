@@ -154,7 +154,8 @@ public class PlayWithSubtract1 : MonoBehaviour
     {
         Monster.position = Vector3.MoveTowards(Monster.position, Dog.position, speed);
         float distance = Vector3.Distance(Monster.position, Dog.position);
-        if (distance <= 0)
+        Debug.Log(distance);
+        if (distance <= 100)
         {
             LoadScene("scene4_tryagain_update");
         }

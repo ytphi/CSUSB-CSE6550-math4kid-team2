@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Microsoft.AppCenter.Unity.Analytics;
+using UnityEngine.SceneManagement;
 
 public class collision_detect : MonoBehaviour
 {
@@ -39,10 +40,15 @@ public class collision_detect : MonoBehaviour
             }
 
             StartCoroutine(PlayParticleSystemOnce());
+            Destroy(Fruit.gameObject);
+            this.gameObject.SetActive(false);
+        }
+        else if (Fruit.CompareTag("Dog") && once)
+        {
+            LoadScene("scene4_tryagain_update");
         }
 
-        Destroy(Fruit.gameObject);
-        this.gameObject.SetActive(false);
+         
     }
 
     IEnumerator PlayParticleSystemOnce()
@@ -73,5 +79,10 @@ public class collision_detect : MonoBehaviour
          yield return new WaitForSeconds(0.04f);
         Gun.position = pos;
         
+    }
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+
     }
 }
