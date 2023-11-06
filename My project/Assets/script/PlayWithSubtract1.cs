@@ -17,7 +17,7 @@ public class PlayWithSubtract1 : MonoBehaviour
     public Transform Monster, parentCanvas, Fruitposition;
     public GameObject Fruit, Monster_obj;
     public float speed;
-    public TextMeshProUGUI Question, Answer1, Answer2, Answer3, Score_text;
+    public TextMeshProUGUI Question, Answer1, Answer2, Answer3,Answer4, Score_text;
     public int value1, value2, answer, progress = 0;
     public static int consequtive_ques_no = 5, score_value, file_score;
     public Vector3 startPosition;
@@ -90,13 +90,14 @@ public class PlayWithSubtract1 : MonoBehaviour
                 StartCoroutine(DisplayTextPanel(question));
                 answer = value2 - value1;
             }
-            int i = Random.Range(1, 3);
-            int ans1, ans2;
+            int i = Random.Range(1, 4);
+            int ans1, ans2, ans3;
             if (i == 1)
             {
                 Answer1.text = answer + "";
                  ans1 = Random.Range(1, 10);
                  ans2= Random.Range(1, 10);
+                ans3 = Random.Range(1, 10);
                 while (answer == ans1)
                 {
                     ans1 = Random.Range(1, 10);
@@ -107,12 +108,18 @@ public class PlayWithSubtract1 : MonoBehaviour
                     ans2 = Random.Range(1, 10);
                 }
                 Answer3.text = ans2.ToString(); // Random.Range(1, 10) + "";
+                while(answer == ans3 || ans3 == ans2||ans3==ans1)
+                {
+                    ans3 = Random.Range(1, 10);
+                }
+                Answer4.text = ans3.ToString();
             }
             else if (i == 2)
             {
                 Answer2.text = answer + "";
                 ans1 = Random.Range(1, 10);
                 ans2 = Random.Range(1, 10);
+                ans3 = Random.Range(1, 10);
                 while (answer == ans1)
                 {
                     ans1 = Random.Range(1, 10);
@@ -123,13 +130,19 @@ public class PlayWithSubtract1 : MonoBehaviour
                     ans2 = Random.Range(1, 10);
                 }
                 Answer3.text = ans2.ToString();// Random.Range(1, 10) + "";
-                
+                while (answer == ans3 || ans3 == ans2 || ans3 == ans1)
+                {
+                    ans3 = Random.Range(1, 10);
+                }
+                Answer4.text = ans3.ToString();
+
             }
-            else
+            else if(i== 3) 
             {
                 Answer3.text = answer + "";
                 ans1 = Random.Range(1, 10);
                 ans2 = Random.Range(1, 10);
+                ans3 = Random.Range(1, 10);
                 while (answer == ans1)
                 {
                     ans1 = Random.Range(1, 10);
@@ -140,7 +153,35 @@ public class PlayWithSubtract1 : MonoBehaviour
                     ans2 = Random.Range(1, 10);
                 }
                 Answer1.text = ans2.ToString();// Random.Range(1, 10) + "";
-                
+                while (answer == ans3 || ans3 == ans2 || ans3 == ans1)
+                {
+                    ans3 = Random.Range(1, 10);
+                }
+                Answer4.text = ans3.ToString();
+
+            }
+            else
+            {
+                Answer4.text = answer + "";
+                ans1 = Random.Range(1, 10);
+                ans2 = Random.Range(1, 10);
+                ans3 = Random.Range(1, 10);
+                while (answer == ans1)
+                {
+                    ans1 = Random.Range(1, 10);
+                }
+                Answer2.text = ans1.ToString();// Random.Range(1, 10) + "";
+                while (answer == ans2 || ans2 == ans1)
+                {
+                    ans2 = Random.Range(1, 10);
+                }
+                Answer1.text = ans2.ToString();// Random.Range(1, 10) + "";
+                while (answer == ans3 || ans3 == ans2 || ans3 == ans1)
+                {
+                    ans3 = Random.Range(1, 10);
+                }
+                Answer3.text = ans3.ToString();
+
             }
 
         }
@@ -154,11 +195,11 @@ public class PlayWithSubtract1 : MonoBehaviour
     {
         Monster.position = Vector3.MoveTowards(Monster.position, Dog.position, speed);
         float distance = Vector3.Distance(Monster.position, Dog.position);
-        Debug.Log(distance);
-        if (distance <= 100)
+       // Debug.Log(distance);
+       /* if (distance <= 100)
         {
-            LoadScene("scene4_tryagain_update");
-        }
+          //  LoadScene("scene4_tryagain_update");
+        }*/
     }
 
     public void CheckAnswer(Button button_colour)
@@ -176,9 +217,9 @@ public class PlayWithSubtract1 : MonoBehaviour
                 consequtive_ques_no--;
                 score_value++;
 
-                Debug.Log("start wait");
+               // Debug.Log("start wait");
                 StartCoroutine(ResetThrowCooldownStart());
-                Debug.Log("end wait");
+               // Debug.Log("end wait");
 
             }
 
@@ -213,11 +254,11 @@ public class PlayWithSubtract1 : MonoBehaviour
 
         // Create a new instance of the object to throw
         Vector3 newPos = new Vector3((Fruitposition.position.x - 1920) / 1, (Fruitposition.position.y - 1080) / 1, 0);
-        Debug.Log(Fruitposition.position);
-        Debug.Log(newPos);
+        
+        Debug.Log("actual_position"+Fruitposition.position);
+        Debug.Log("new_position"+newPos);
         GameObject FruiteClone = Instantiate(Fruit, newPos, Quaternion.identity);
         FruiteClone.transform.SetParent(parentCanvas, false);
-
         Debug.Log(FruiteClone.name);
         Debug.Log("clone position:");
         Debug.Log(FruiteClone.transform.position);
@@ -233,7 +274,7 @@ public class PlayWithSubtract1 : MonoBehaviour
     IEnumerator ResetThrowCooldownStart()
     {
 
-        Debug.Log(Time.time);
+        //Debug.Log(Time.time);
         yield return new WaitForSeconds(2.0f);
         QuestionGenerate();
         int randomIndex = Random.Range(0, imageOptions.Count);
@@ -242,7 +283,7 @@ public class PlayWithSubtract1 : MonoBehaviour
         imageComponent.sprite = imageOptions[randomIndex];
 
         //yield return new WaitForSeconds(1.0f);
-        Debug.Log(Time.time);
+       // Debug.Log(Time.time);
 
 
 
