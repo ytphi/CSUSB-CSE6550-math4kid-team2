@@ -188,10 +188,10 @@ RectTransform:
   - {fileID: 1226764347}
   m_Father: {fileID: 579926967}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.117666684, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2367.7583, y: 865}
-  m_SizeDelta: {x: -957.2369, y: 196.31}
+  m_AnchoredPosition: {x: 1610.48, y: 762.01}
+  m_SizeDelta: {x: 417.69, y: 314.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &116342740
 MonoBehaviour:
@@ -1442,7 +1442,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 3840, y: 2160}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0.16
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -3405,8 +3405,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 1, y: 1, z: 1}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1625.4578, y: 923.42}
-  m_SizeDelta: {x: 771.1282, y: 313.15}
+  m_AnchoredPosition: {x: 1610.5, y: 805.81}
+  m_SizeDelta: {x: 945.103, y: 448.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1489269110
 MonoBehaviour:

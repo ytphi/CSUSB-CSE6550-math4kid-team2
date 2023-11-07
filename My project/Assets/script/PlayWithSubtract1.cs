@@ -17,7 +17,7 @@ public class PlayWithSubtract1 : MonoBehaviour
     public Transform Monster, parentCanvas, Fruitposition;
     public GameObject Fruit, Monster_obj;
     public float speed;
-    public TextMeshProUGUI Question, Answer1, Answer2, Answer3,Answer4, Score_text;
+    public TextMeshProUGUI Question, Answer1, Answer2, Answer3, Answer4, Score_text;
     public int value1, value2, answer, progress = 0;
     public static int consequtive_ques_no = 5, score_value, file_score;
     public Vector3 startPosition;
@@ -233,7 +233,15 @@ public class PlayWithSubtract1 : MonoBehaviour
             {
                 consequtive_ques_no--;
                 StartCoroutine(ChangeColorCoroutine(button_colour, Color.red));
-                QuestionGenerate();
+                string answerwithquestion = Question.text;
+                char[] charArray = answerwithquestion.ToCharArray();
+                charArray[answerwithquestion.Length - 1] = answer.ToString()[0];
+
+                string v = new string(charArray);
+                Debug.Log("answer"+v);
+                StartCoroutine(DisplayTextPanel(v));
+                StartCoroutine(WaitTime());
+               
             }
 
         }
@@ -297,6 +305,11 @@ public class PlayWithSubtract1 : MonoBehaviour
             yield return new WaitForSeconds(0.04f);
         }
     }
+    public IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(2.0f);
+        QuestionGenerate();
+    }
     private IEnumerator ChangeColorCoroutine(Button button_image, Color c)
     {
         Image image = button_image.GetComponent<Image>();
@@ -310,5 +323,6 @@ public class PlayWithSubtract1 : MonoBehaviour
             image.color = original;
         }
     }
+   
 }
 
