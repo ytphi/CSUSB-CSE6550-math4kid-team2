@@ -25,6 +25,7 @@ public class PlayWithSubtract1 : MonoBehaviour
     public string File_path, fileContents;
     public Image imageComponent;
     public List<Sprite> imageOptions = new List<Sprite>();
+    public DatabaseManager databaseManager;
 
 
 
@@ -33,22 +34,44 @@ public class PlayWithSubtract1 : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
-        File_path = "Assets/Score_data.txt"; // Update with your file path
-        if (File.Exists(File_path))
+        /* File_path = "Assets/Score_data.txt"; // Update with your file path
+         if (File.Exists(File_path))
+         {
+             fileContents = File.ReadAllText(File_path);
+             Debug.Log("File Contents:\n" + fileContents);
+         }
+         else
+         {
+             Debug.LogError("File not found at path: " + File_path);
+         }*/
+        //Score_text.text = " " + fileContents;
+        //file_score = int.Parse(fileContents);
+        databaseManager = GetComponent<DatabaseManager>();
+        if (databaseManager != null)
         {
-            fileContents = File.ReadAllText(File_path);
-            Debug.Log("File Contents:\n" + fileContents);
+            DisplayScores();
         }
         else
         {
-            Debug.LogError("File not found at path: " + File_path);
+            Debug.LogError("DatabaseManager not found on the GameObject.");
         }
-        Score_text.text = " " + fileContents;
-        file_score = int.Parse(fileContents);
+
+        // Insert a sample score
+        // databaseManager.InsertScore("Player1", 100);
+        // Display all scores
+        // databaseManager.DisplayScores();
         Debug.Log(Monster.position);
         startPosition = new Vector3(Monster.position.x, Monster.position.y, Monster.position.z);
         QuestionGenerate();
 
+    }
+    void DisplayScores()
+    {
+        Player player = databaseManager.GetPlayer();
+
+        Debug.Log(player.PlayerName);
+        Score_text.text = $"   {player.Score}";
+        file_score = player.Score;
     }
     public void QuestionGenerate()
     {
@@ -59,14 +82,17 @@ public class PlayWithSubtract1 : MonoBehaviour
         {
             file_score++;
             consequtive_ques_no = 5; score_value = 0;
-            File.WriteAllText(File_path, file_score.ToString());
+            //File.WriteAllText(File_path, file_score.ToString());
+            var player = databaseManager.GetPlayer();
+            int newScore = player.Score + 1;
+            databaseManager.UpdatePlayerScore(newScore);
             LoadScene("scene3_congratulation");
         }
         else if (score_value < 5 & consequtive_ques_no == 0)
         {
 
             consequtive_ques_no = 5; score_value = 0;
-            File.WriteAllText(File_path, file_score.ToString());
+            //File.WriteAllText(File_path, file_score.ToString());
             LoadScene("scene4_tryagain_update");
         }
         else
@@ -274,8 +300,8 @@ public class PlayWithSubtract1 : MonoBehaviour
         Vector3 direction = (Monster.position - Dog.position).normalized;
         Rigidbody2D rb = FruiteClone.GetComponent<Rigidbody2D>();
         // Apply force to the monster in that direction
-        rb.AddForce(Vector3.up * 400.0f, ForceMode2D.Impulse);
-        rb.AddForce(direction * 2500.0f, ForceMode2D.Impulse);
+        rb.AddForce(Vector3.up * 200.0f, ForceMode2D.Impulse);
+        rb.AddForce(direction * 1000.0f, ForceMode2D.Impulse);
         //rb.AddForce(-Vector3.up * 200.0f, ForceMode2D.Impulse);
 
     }

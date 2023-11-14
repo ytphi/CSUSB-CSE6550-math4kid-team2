@@ -1359,6 +1359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 579926967}
+  - component: {fileID: 579926975}
   - component: {fileID: 579926970}
   - component: {fileID: 579926969}
   - component: {fileID: 579926968}
@@ -1587,7 +1588,7 @@ MonoBehaviour:
   Fruitposition: {fileID: 91298066}
   Fruit: {fileID: 3841689023407608869, guid: d34a8486a2826f94cb5d03d7986e6fdb, type: 3}
   Monster_obj: {fileID: 1222507166}
-  speed: 3
+  speed: 2
   Question: {fileID: 2134712233}
   Answer1: {fileID: 1258087861}
   Answer2: {fileID: 2129209888}
@@ -1607,6 +1608,7 @@ MonoBehaviour:
   - {fileID: -8915481715034314228, guid: c3e38dd148c367243aab6b8fe6b76f45, type: 3}
   - {fileID: 6618906693038760871, guid: c94bbfa9644bda0478ddb195944f914c, type: 3}
   - {fileID: -6432384586018476843, guid: 8ad55e0b312a827408c918bf6fb56f11, type: 3}
+  databaseManager: {fileID: 0}
 --- !u!114 &579926973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1645,6 +1647,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579926966}
   m_CullTransparentMesh: 1
+--- !u!114 &579926975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579926966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0f26e18a21a2943965a9eccb4443ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &745675711
 GameObject:
   m_ObjectHideFlags: 0
