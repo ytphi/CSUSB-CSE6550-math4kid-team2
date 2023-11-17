@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class collision_detect : MonoBehaviour
 {
     public Transform parentCanvas;
-    public ParticleSystem collision_obj1;
-    public ParticleSystem collision_obj2;
+   // public ParticleSystem collision_obj1;
+   // public ParticleSystem collision_obj2;
     public bool once = true;
     public Transform Gun;
     public AudioSource collisionSound;
@@ -17,14 +17,14 @@ public class collision_detect : MonoBehaviour
     // bool em1 = collision_obj1.emission;
     // bool em2 = collision_obj2.emission;
 
-    public void OnTriggerEnter2D(Collider2D Fruit)
+    public void OnTriggerEnter2D(Collider2D Object_coll)
     {
         Debug.Log("hit detected");
 
-        if (Fruit.CompareTag("Fruit") && once)
+        if (Object_coll.CompareTag("Fruit") && once)
         {
             // Access the emission module of the ParticleSystems and enable it
-            var em1 = collision_obj1.emission;
+          /*  var em1 = collision_obj1.emission;
             em1.enabled = true;
             collision_obj1.transform.position = this.transform.position;
 
@@ -33,25 +33,25 @@ public class collision_detect : MonoBehaviour
             collision_obj2.transform.position = this.transform.position;
 
             collision_obj1.Play();
-            collision_obj2.Play();
+            collision_obj2.Play();*/
             if (collisionSound != null)
             {
                 collisionSound.Play();
             }
 
-            StartCoroutine(PlayParticleSystemOnce());
-            Destroy(Fruit.gameObject);
+            //StartCoroutine(PlayParticleSystemOnce());
+            Destroy(Object_coll.gameObject);
             this.gameObject.SetActive(false);
         }
-        else if (Fruit.CompareTag("Dog") && once)
+        else if (Object_coll.CompareTag("Dog") && once)
         {
-            LoadScene("scene4_tryagain_update");
+            SceneManager.LoadScene("scene4_tryagain_update");
         }
 
          
     }
 
-    IEnumerator PlayParticleSystemOnce()
+  /*  IEnumerator PlayParticleSystemOnce()
     {
         yield return new WaitForSeconds(0.01f);
 
@@ -65,7 +65,7 @@ public class collision_detect : MonoBehaviour
 
         var em2 = collision_obj2.emission;
         em2.enabled = false;
-    }
+    }*/
 
     public void ShootGunPosition()
     {
@@ -80,9 +80,5 @@ public class collision_detect : MonoBehaviour
         Gun.position = pos;
         
     }
-    public void LoadScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-
-    }
+   
 }
