@@ -7,7 +7,7 @@ public class ScoreManager : MonoBehaviour
     private const string ScoreKey = "PlayerScore";
     public TextMeshProUGUI scoreText;
 
-    private int currentScore;
+    private static int currentScore;
 
     void Start()
     {
@@ -37,12 +37,13 @@ public class ScoreManager : MonoBehaviour
         Debug.Log("Score Increased! New Score: " + currentScore);
 
         // Update the UI text to display the current score
-        UpdateScoreUI();
+       // UpdateScoreUI();
     }
 
     void LoadPlayerScore()
     {
         // Load player score or set to 0 if it doesn't exist
+        
         currentScore = PlayerPrefs.GetInt(ScoreKey, 0);
         Debug.Log("Player score loaded: " + currentScore);
     }

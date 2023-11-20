@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class collision_detect : MonoBehaviour
 {
     public Transform parentCanvas;
-   // public ParticleSystem collision_obj1;
-   // public ParticleSystem collision_obj2;
+    public ParticleSystem collision_obj1;
+    public ParticleSystem collision_obj2;
     public bool once = true;
     public Transform Gun;
+    public Camera mainCamera;
     public AudioSource collisionSound;
 
     // Remove these two lines
@@ -24,16 +25,22 @@ public class collision_detect : MonoBehaviour
         if (Object_coll.CompareTag("Fruit") && once)
         {
             // Access the emission module of the ParticleSystems and enable it
-          /*  var em1 = collision_obj1.emission;
+           
+            
+            
+            Debug.Log( transform.position);
+            //Debug.Log(canvasRect.TransformPoint(canvasPosition));
+            // Enable emission and play the particle system
+            var em1 = collision_obj1.emission;
             em1.enabled = true;
             collision_obj1.transform.position = this.transform.position;
 
             var em2 = collision_obj2.emission;
             em2.enabled = true;
             collision_obj2.transform.position = this.transform.position;
-
-            collision_obj1.Play();
-            collision_obj2.Play();*/
+           // collision_obj1.Play();
+            //collision_obj2.Play();
+            
             if (collisionSound != null)
             {
                 collisionSound.Play();
@@ -51,21 +58,21 @@ public class collision_detect : MonoBehaviour
          
     }
 
-  /*  IEnumerator PlayParticleSystemOnce()
+    Vector2 ScreenToCanvasPosition(Vector3 screenPosition)
     {
-        yield return new WaitForSeconds(0.01f);
+        RectTransform canvasRect = GetComponent<RectTransform>();
+        Vector2 canvasSize = canvasRect.sizeDelta;
 
-        collision_obj1.Pause();
-        collision_obj2.Pause();
-        collisionSound.Stop();
+        // Normalize screen coordinates to the range [0, 1]
+        float normalizedX = screenPosition.x / Screen.width;
+        float normalizedY = screenPosition.y / Screen.height;
 
-        // Access the emission module and disable it
-        var em1 = collision_obj1.emission;
-        em1.enabled = false;
+        // Map normalized coordinates to canvas coordinates
+        float canvasX = normalizedX * canvasSize.x;
+        float canvasY = normalizedY * canvasSize.y;
 
-        var em2 = collision_obj2.emission;
-        em2.enabled = false;
-    }*/
+        return new Vector2(canvasX, canvasY);
+    }
 
     public void ShootGunPosition()
     {

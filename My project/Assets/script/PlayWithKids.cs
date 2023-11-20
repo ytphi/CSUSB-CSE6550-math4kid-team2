@@ -40,6 +40,7 @@ public class PlayWithKids : MonoBehaviour
                 consequtive_ques_no = 5;
                 score_value = 0;
                 scoreManager = new ScoreManager();
+                Debug.Log("Increase score");
                 scoreManager.IncreaseScore();
                 SceneManager.LoadScene("scene3_congratulation");
             }
@@ -256,10 +257,9 @@ public class PlayWithKids : MonoBehaviour
         Rigidbody2D rb = fruitClone.GetComponent<Rigidbody2D>();
 
         // Apply force to the fruit in the up direction and towards the monster
-        // rb.AddForce(Vector2.up * 5.0f, ForceMode2D.Impulse);
-        // rb.AddForce(direction * 10.0f, ForceMode2D.Impulse);
-        rb.velocity = Fruitposition.up * 10.0f;
-        rb.velocity = Fruitposition.right * 15.0f;
+        
+        Vector2 throwingVelocity = (Vector3.up * 3.0f)+(Fruitposition.right * 15.0f) ;
+        rb.velocity = throwingVelocity;
         // Debug information
         Debug.Log(fruitClone.name);
         Debug.Log("Clone position: " + fruitClone.transform.position);
