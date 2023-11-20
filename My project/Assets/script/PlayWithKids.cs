@@ -8,11 +8,11 @@ using System.IO;
 using Microsoft.AppCenter.Unity.Analytics;
 
 
-
 public class PlayWithKids : MonoBehaviour
 {
     
     public Transform Dog,Monster, parentCanvas, Fruitposition;
+    public Transform Gun;
     public float speed;
     public GameObject Fruit, monster_obj;
     public Vector3 startPosition;
@@ -22,12 +22,17 @@ public class PlayWithKids : MonoBehaviour
     public Slider slider_value;
     public List<Sprite> imageOptions = new List<Sprite>();
     public ScoreManager scoreManager;
+    [SerializeField] private bool Control_question_genarate = true;
+
+    public object Fruiteposition { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("fruite: " + Fruitposition.position);
+       // Debug.Log("fruite: " + Fruitposition.position);
         startPosition = new Vector3(Monster.position.x, Monster.position.y, Monster.position.z);
-        Debug.Log("monster: " + startPosition);
+        // Debug.Log("monster: " + startPosition);
+        Debug.Log("Play game:");
         QuestionGenerate();
     }
     public void QuestionGenerate()
@@ -138,6 +143,7 @@ public class PlayWithKids : MonoBehaviour
         Monster.position = Vector3.MoveTowards(Monster.position, Dog.position, speed);
        
         float distance = Vector3.Distance(Monster.position, Dog.position);
+        Debug.Log("distance"+distance);
         
     }
 
@@ -151,30 +157,36 @@ public class PlayWithKids : MonoBehaviour
             yield return new WaitForSeconds(0.04f);
         }
     }
+   
     public void CheckAnswer(Button button_colour)
     {
-        TextMeshProUGUI button_answer = button_colour.GetComponentInChildren<TextMeshProUGUI>();
-        Image image = button_colour.GetComponent<Image>();
-        if (button_answer.text == answer.ToString())
+        if (Control_question_genarate)
+        
         {
-            StartCoroutine(ChangeColorCoroutine(button_colour, Color.green));
-            ThrowObject();
-            consequtive_ques_no--;
-            score_value++;
+
+            Control_question_genarate = false;
+            TextMeshProUGUI button_answer = button_colour.GetComponentInChildren<TextMeshProUGUI>();
+            Image image = button_colour.GetComponent<Image>();
+            if (button_answer.text == answer.ToString())
+            {
+                StartCoroutine(ChangeColorCoroutine(button_colour, Color.green));
+                ThrowObject();
+                consequtive_ques_no--;
+                score_value++;
 
                 // Debug.Log("start wait");
-            StartCoroutine(ResetThrowCooldownStart());
+                StartCoroutine(ResetThrowCooldownStart());
                 // Debug.Log("end wait");
 
-            
 
 
-        }
-        else
-        {
+
+            }
+            else
+            {
 
 
-            
+
                 consequtive_ques_no--;
                 StartCoroutine(ChangeColorCoroutine(button_colour, Color.red));
                 string answerwithquestion = Question.text;
@@ -186,11 +198,18 @@ public class PlayWithKids : MonoBehaviour
                 StartCoroutine(DisplayTextPanel(v));
                 StartCoroutine(WaitTime());
 
-            
+
+
+            }
+            progress++;
+            slider_value.value = progress;
 
         }
-        progress++;
-        slider_value.value = progress;
+        else
+        {
+            Debug.Log("wait for next");
+        }
+        
 
 
     }
@@ -215,7 +234,9 @@ public class PlayWithKids : MonoBehaviour
         {
             Debug.LogError("SpriteRenderer component not found on the imageComponent GameObject.");
         }
-       // startPosition = new Vector3(Monster.position.x, Monster.position.y, Monster.position.z);
+        // startPosition = new Vector3(Monster.position.x, Monster.position.y, Monster.position.z);
+
+        Control_question_genarate = true;
         QuestionGenerate();
 
         //yield return new WaitForSeconds(1.0f);
@@ -227,6 +248,8 @@ public class PlayWithKids : MonoBehaviour
     public IEnumerator WaitTime()
     {
         yield return new WaitForSeconds(2.0f);
+
+        Control_question_genarate = true;
         QuestionGenerate();
     }
     private IEnumerator ChangeColorCoroutine(Button button_image, Color c)
@@ -244,8 +267,9 @@ public class PlayWithKids : MonoBehaviour
     }
     public void ThrowObject()
     {
+        Vector3 newPos = new Vector3(Fruitposition.position.x / 2, Fruitposition.position.y / 2, Fruitposition.position.z);
         // Create a new instance of the object to throw
-        GameObject fruitClone = Instantiate(Fruit, Fruitposition.position, Quaternion.identity);
+        GameObject fruitClone = Instantiate(Fruit,Fruitposition.position, Quaternion.identity);
 
         // Set the parent of the cloned object to the main camera
          fruitClone.transform.SetParent(parentCanvas, false);
@@ -261,9 +285,22 @@ public class PlayWithKids : MonoBehaviour
         Vector2 throwingVelocity = (Vector3.up * 3.0f)+(Fruitposition.right * 15.0f) ;
         rb.velocity = throwingVelocity;
         // Debug information
+        Debug.Log(Fruitposition.position+"");
         Debug.Log(fruitClone.name);
         Debug.Log("Clone position: " + fruitClone.transform.position);
         Debug.Log("Direction: " + direction);
     }
+    public void ShootGunPosition()
+    {
+        Vector3 position = Gun.position;
+        StartCoroutine(PositionChange(position));
+    }
+    public IEnumerator PositionChange(Vector3 pos)
+    {
+        Vector3 newpos = new Vector3(pos.x + 20, pos.y, pos.z);
+        Gun.position = newpos;
+        yield return new WaitForSeconds(0.04f);
+        Gun.position = pos;
 
+    }
 }

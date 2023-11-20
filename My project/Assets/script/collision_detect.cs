@@ -10,9 +10,9 @@ public class collision_detect : MonoBehaviour
     public ParticleSystem collision_obj1;
     public ParticleSystem collision_obj2;
     public bool once = true;
-    public Transform Gun;
+   
     public Camera mainCamera;
-    public AudioSource collisionSound;
+    public AudioSource collisionSound,collision_sound2;
 
     // Remove these two lines
     // bool em1 = collision_obj1.emission;
@@ -38,24 +38,37 @@ public class collision_detect : MonoBehaviour
             var em2 = collision_obj2.emission;
             em2.enabled = true;
             collision_obj2.transform.position = this.transform.position;
-           // collision_obj1.Play();
-            //collision_obj2.Play();
+            collision_obj1.Play();
+            collision_obj2.Play();
             
             if (collisionSound != null)
             {
                 collisionSound.Play();
             }
 
-            //StartCoroutine(PlayParticleSystemOnce());
+            //
             Destroy(Object_coll.gameObject);
             this.gameObject.SetActive(false);
         }
         else if (Object_coll.CompareTag("Dog") && once)
         {
-            SceneManager.LoadScene("scene4_tryagain_update");
+
+            if (collision_sound2 != null)
+            {
+                collision_sound2.Play();
+            }
+            StartCoroutine(PlaymusicSystemOnce());
+           
+            
         }
 
          
+    }
+    public IEnumerator PlaymusicSystemOnce()
+    {
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene("scene4_tryagain_update");
+
     }
 
     Vector2 ScreenToCanvasPosition(Vector3 screenPosition)
@@ -74,18 +87,6 @@ public class collision_detect : MonoBehaviour
         return new Vector2(canvasX, canvasY);
     }
 
-    public void ShootGunPosition()
-    {
-        Vector3 position = Gun.position;
-        StartCoroutine(PositionChange(position));
-    }
-    public IEnumerator PositionChange(Vector3 pos)
-    {
-         Vector3 newpos=new Vector3(pos.x+20, pos.y, pos.z);
-         Gun.position = newpos;
-         yield return new WaitForSeconds(0.04f);
-        Gun.position = pos;
-        
-    }
+   
    
 }
