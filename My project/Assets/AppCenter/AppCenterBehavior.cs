@@ -22,15 +22,39 @@ public class AppCenterBehavior : MonoBehaviour
 
     private void Awake()
     {
-        // Make sure that App Center have only one instance.
         if (_instance != null && _instance != this)
         {
-            Debug.LogError("App Center Behavior should have only one instance!");
+            // If another instance exists, destroy this one
             DestroyImmediate(gameObject);
             return;
         }
+
+        // Assign this instance
         _instance = this;
-        DontDestroyOnLoad(gameObject);
+
+        // Use try-catch block to handle the MissingReferenceException
+        try
+        {
+            // Check if the GameObject is null or has been destroyed
+            if (gameObject == null)
+            {
+                Debug.LogError("The AppCenterBehavior's GameObject has been destroyed.");
+                return;
+            }
+
+            // Your existing initialization code...
+
+            // Don't destroy the object on load if it's the current instance
+            if (_instance == this)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
+        }
+        catch (MissingReferenceException ex)
+        {
+            Debug.LogError($"An exception occurred in AppCenterBehavior.Awake(): {ex}");
+        }
+        Debug.Log("Awake called in AppCenterBehavior. Instance: " + this.GetInstanceID());
 #if UNITY_WSA_10_0
         StartAppCenter();
 #endif
@@ -38,6 +62,7 @@ public class AppCenterBehavior : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("start called in AppCenterBehavior. Instance: " + this.GetInstanceID());
 #if !UNITY_WSA_10_0
         StartAppCenter();
 #endif

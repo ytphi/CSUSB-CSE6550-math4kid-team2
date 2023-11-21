@@ -143,7 +143,7 @@ public class PlayWithKids : MonoBehaviour
         Monster.position = Vector3.MoveTowards(Monster.position, Dog.position, speed);
        
         float distance = Vector3.Distance(Monster.position, Dog.position);
-        Debug.Log("distance"+distance);
+        //Debug.Log("distance"+distance);
         
     }
 
