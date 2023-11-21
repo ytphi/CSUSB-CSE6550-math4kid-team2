@@ -23,7 +23,7 @@ public class AppCenterBehavior : MonoBehaviour
     private void Awake()
     {
         // Make sure that App Center have only one instance.
-        if (_instance != null)
+        if (_instance != null && _instance != this)
         {
             Debug.LogError("App Center Behavior should have only one instance!");
             DestroyImmediate(gameObject);

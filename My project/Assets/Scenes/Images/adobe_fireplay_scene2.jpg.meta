@@ -164,7 +164,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      adobe_fireplay_scene2_0: -4054582959439453631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

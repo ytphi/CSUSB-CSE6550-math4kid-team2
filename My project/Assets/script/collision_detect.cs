@@ -57,6 +57,7 @@ public class collision_detect : MonoBehaviour
             {
                 collision_sound2.Play();
             }
+            
             StartCoroutine(PlaymusicSystemOnce());
            
             
