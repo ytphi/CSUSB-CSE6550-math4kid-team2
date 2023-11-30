@@ -33,6 +33,7 @@ public class PlayWithKids : MonoBehaviour
         startPosition = new Vector3(Monster.position.x, Monster.position.y, Monster.position.z);
         // Debug.Log("monster: " + startPosition);
         Debug.Log("Play game:");
+        slider_value.interactable = false;
         QuestionGenerate();
     }
     public void QuestionGenerate()

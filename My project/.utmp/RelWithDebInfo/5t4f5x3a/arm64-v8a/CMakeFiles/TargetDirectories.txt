@@ -1,5 +1,0 @@
-C:/Users/008450592/source/repos/sarahchowdhury/CSUSB-CSE6550-math4kid-team2/My project/.utmp/RelWithDebInfo/5t4f5x3a/arm64-v8a/CMakeFiles/edit_cache.dir
-C:/Users/008450592/source/repos/sarahchowdhury/CSUSB-CSE6550-math4kid-team2/My project/.utmp/RelWithDebInfo/5t4f5x3a/arm64-v8a/CMakeFiles/rebuild_cache.dir
-C:/Users/008450592/source/repos/sarahchowdhury/CSUSB-CSE6550-math4kid-team2/My project/.utmp/RelWithDebInfo/5t4f5x3a/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
-C:/Users/008450592/source/repos/sarahchowdhury/CSUSB-CSE6550-math4kid-team2/My project/.utmp/RelWithDebInfo/5t4f5x3a/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
-C:/Users/008450592/source/repos/sarahchowdhury/CSUSB-CSE6550-math4kid-team2/My project/.utmp/RelWithDebInfo/5t4f5x3a/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
