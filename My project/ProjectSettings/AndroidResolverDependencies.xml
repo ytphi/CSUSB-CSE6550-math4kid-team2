@@ -6,7 +6,7 @@
   <files />
   <settings>
     <setting name="androidAbis" value="arm64-v8a" />
-    <setting name="bundleId" value="com.Team2.Math_Subtraction" />
+    <setting name="bundleId" value="com.CSUSBCSE6550Team2.MathSubtraction" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradlePropertiesTemplateEnabled" value="True" />
