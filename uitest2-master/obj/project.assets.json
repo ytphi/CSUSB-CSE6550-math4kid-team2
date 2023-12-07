@@ -2001,6 +2001,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v13.0": [
+      "Microsoft.AppCenter >= 5.0.3",
       "Microsoft.AppCenter.Analytics >= 5.0.3",
       "Microsoft.AppCenter.Crashes >= 5.0.3",
       "Xamarin.AndroidX.AppCompat >= 1.2.0.5",
@@ -2046,6 +2047,10 @@
     "frameworks": {
       "monoandroid13.0": {
         "dependencies": {
+          "Microsoft.AppCenter": {
+            "target": "Package",
+            "version": "[5.0.3, )"
+          },
           "Microsoft.AppCenter.Analytics": {
             "target": "Package",
             "version": "[5.0.3, )"
